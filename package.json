@@ -1,6 +1,6 @@
 {
   "name": "@iiitn/canvas",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Canvas Library for users.",
   "main": "Canvas/index.js",
   "scripts": {
