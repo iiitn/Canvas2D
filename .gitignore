@@ -1,5 +1,7 @@
 node_modules
 package-lock.json
 bundle
-dist
 index.d.ts
+index.js
+Shapes
+!Canvas/Shapes
