@@ -1,15 +1,15 @@
 {
   "name": "@iiitn/canvas",
-  "version": "0.1.2",
-  "description": "Canvas Library for users.",
-  "main": "Canvas/index.js",
+  "version": "0.1.0",
+  "description": "Canvas Library for IIIT students.",
+  "main": "dist/index.js",
   "scripts": {
     "prepublish": "tsc"
   },
   "author": "Kishore <kishore.iiitn@gmail.com>",
   "license": "ISC",
   "files": [
-    "Canvas/",
+    "Canvas",
     "README.md"
   ],
   "devDependencies": {
