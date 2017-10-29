@@ -9,7 +9,7 @@
   "author": "Kishore <kishore.iiitn@gmail.com>",
   "license": "ISC",
   "files": [
-    "Canvas",
+    "dist",
     "README.md"
   ],
   "devDependencies": {
