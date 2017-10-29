@@ -4,7 +4,7 @@
   "description": "Canvas Library for IIIT students.",
   "main": "dist/index.js",
   "scripts": {
-    "prepublish": "tsc && mv dist/index.d.ts"
+    "prepublish": "tsc && mv dist/index.d.ts ."
   },
   "author": "Kishore <kishore.iiitn@gmail.com>",
   "license": "ISC",
