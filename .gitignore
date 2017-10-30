@@ -1,11 +1,6 @@
 node_modules
 package-lock.json
-bundle
-index.d.ts
-index.js
-Shapes
-!Canvas/Shapes
-browser.d.ts
-Point.d.ts
-browser.js
-Point.js
+*.d.ts
+*.js
+*.js.map
+!webpack.config.js
