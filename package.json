@@ -2,14 +2,17 @@
   "name": "@iiitn/canvas",
   "version": "0.1.14",
   "description": "Canvas Library for IIIT students.",
-  "main": "dist/index.js",
+  "main": "./index.js",
   "scripts": {
     "prepublish": "tsc && mv dist/index.d.ts ."
   },
   "author": "Kishore <kishore.iiitn@gmail.com>",
   "license": "ISC",
   "files": [
-    "dist",
+    "Shapes",
+    "Point.js",
+    "Point.d.ts",
+    "index.js",
     "index.d.ts",
     "README.md"
   ],
@@ -17,5 +20,12 @@
     "typescript": "^2.5.3",
     "ts-loader": "^3.1.0",
     "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.80",
+    "@types/victor": "^1.1.0",
+    "lodash": "^4.17.4",
+    "source-map-loader": "^0.2.3",
+    "victor": "^1.1.0"
   }
 }
