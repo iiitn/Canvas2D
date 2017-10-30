@@ -85,8 +85,6 @@ export class Canvas {
 		this.objects.map((shape)=>{
 			shape.render(this.context, this.baseUnit);
 		});
-		this.context.stroke();
-		this.context.fill();
 		if (this.renderIndefinite && !this._pause) {
 			requestAnimationFrame(this.render);
 		}

@@ -62,6 +62,7 @@ export class Circle extends Shape {
 		context.shadowColor=this.color;
 		context.fillStyle = this.color;
 		context.arc(this.curPosition.x, this.curPosition.y, this.radius, 0, Math.PI*2);
+		context.fill();
 		context.closePath();
 		return this;
 	}

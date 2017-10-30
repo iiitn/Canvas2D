@@ -62,6 +62,7 @@ export class Rectangle extends Shape {
 		context.shadowColor=this.color;
 		context.fillStyle = this.color;
 		context.fillRect(this.curPosition.x, this.curPosition.y, this.width, this.height);
+		context.fill();
 		context.closePath();
 		return this;
 	}
