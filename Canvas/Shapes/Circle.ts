@@ -46,12 +46,15 @@ export class Circle extends Shape {
 			let unit = baseUnit*this._move.unit;
 			if (unit==0) {
 				// Move instantly.
-				console.log("MOve Instant");
 				this.curPosition.copy(this._move.position);
+				this._move.callback && this._move.callback();
 			}
 			else {
 				// Interpolate Movement.
 				(this.curPosition as any).interpolate(this._move.position, unit);
+				if (this.curPosition.isEqualTo(this._move.position)) {
+					this._move.callback && this._move.callback();
+				}
 			}
 		}
 		context.beginPath();
@@ -65,14 +68,18 @@ export class Circle extends Shape {
 
 	/**
 	 * Move Circle to new position.
-	 * @param x
+	 * @param x 
 	 * @param y 
 	 * @param unit 0 to move instantly or specify a number to animate.
+	 * @param onFinish Callback function to call after movement is complete.
 	 */
-	moveTo(x: number, y: number, unit = 1) {
+	moveTo(x: number, y: number, unit = 1, onFinish?: (from: Point)=>void) {
 		this._move = {
 			position: new Point(x, y),
-			unit: Math.abs(unit)
+			unit: Math.abs(unit),
+			callback: onFinish?()=>{
+				onFinish(this.curPosition.clone());
+			}:undefined
 		};
 		return this;
 	}

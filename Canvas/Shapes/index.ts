@@ -16,10 +16,11 @@ export abstract class Shape {
 	protected _move: {
 		position: Point
 		unit: number
+		callback?: (from?: Point)=>void
 	};
 
 	abstract render(context: CanvasRenderingContext2D, baseUnit: number): void;
-	abstract moveTo(x: number, y: number, speed?: number): void;
+	abstract moveTo(x: number, y: number, unit?: number, onFinish?: (from: Point)=>void): void;
 	abstract getDimensions(): IDimension;
 }
 

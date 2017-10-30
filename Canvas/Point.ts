@@ -9,7 +9,6 @@ import Victor = require('victor');
 	}
 	let ix = (unit/d)*(a.x-self.x);
 	let iy = (unit/d)*(a.y-self.y);
-	console.log(ix, iy);
 	self.add(new Victor(ix, iy));
 	return this;
 }
