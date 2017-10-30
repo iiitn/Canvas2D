@@ -22,6 +22,20 @@ export abstract class Shape {
 	abstract render(context: CanvasRenderingContext2D, baseUnit: number): void;
 	abstract moveTo(x: number, y: number, unit?: number, onFinish?: (from: Point)=>void): void;
 	abstract getDimensions(): IDimension;
+
+	isOverlap(obj: Shape) {
+		let a = this.getDimensions();
+		let b = obj.getDimensions();
+
+		// Check if not horizontal side overlap.
+		if (a.x>(b.x+b.width) || b.x>(a.x+a.width)) {
+			return false;
+		}
+		if (a.y>(b.y+b.height) || b.y>(a.y+a.height)) {
+			return false;
+		}
+		return true;
+	}
 }
 
 export {Rectangle} from './Rectangle';
