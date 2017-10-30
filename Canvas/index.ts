@@ -60,6 +60,24 @@ export class Canvas {
 	}
 
 	/**
+	 * Check if object is in bounds of canvas viewport.
+	 * @param obj
+	 */
+	isInViewPort(obj: Shape): boolean {
+		let dim = obj.getDimensions();
+
+		// Check if object is horizontally out of bounds.
+		if (dim.x>this.width || (dim.x+dim.width)<0) {
+			return false;
+		}
+		// Check if object is vertically out of bounds.
+		if (dim.y>this.height || (dim.y+dim.height)<0) {
+			return false;
+		}
+		return true;
+	}
+
+	/**
 	 * Renders canvas iterating through all the objects.
 	 */
 	render() {
