@@ -5,3 +5,7 @@ index.d.ts
 index.js
 Shapes
 !Canvas/Shapes
+browser.d.ts
+Point.d.ts
+browser.js
+Point.js
