@@ -24,3 +24,4 @@ export abstract class Shape {
 }
 
 export {Rectangle} from './Rectangle';
+export {Circle} from './Circle';
