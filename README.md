@@ -1,3 +1,3 @@
-# Canvas Demo App.
+# Canvas Library.
 
-Demo app to demonstrate Web technologies scope.
+Canvas Library for HTML5.
