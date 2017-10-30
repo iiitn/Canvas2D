@@ -10,6 +10,14 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.tsx?$/,
+				loader: 'source-map-loader'
+			},
+			{
+				test: /\.jsx?$/,
+				loader: 'source-map-loader'
+			},
+			{
+				test: /\.tsx?$/,
 				exclude: /node_modules/,
 				loader: 'ts-loader'
 			}
@@ -17,5 +25,6 @@ module.exports = {
 	},
 	resolve: {
 		extensions: [".tsx", ".ts", ".js"]
-	}
+	},
+	devtool: 'source-map'	
 };
