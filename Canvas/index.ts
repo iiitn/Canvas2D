@@ -4,7 +4,9 @@ export class Canvas {
 	public readonly height: number;
 	public readonly width: number;
 
-	private baseUnit: number = 10;
+	private _pause = false;
+
+	private baseUnit: number = 5;
 	private context: CanvasRenderingContext2D;
 	private renderIndefinite: boolean;
 
@@ -67,8 +69,31 @@ export class Canvas {
 		});
 		this.context.stroke();
 		this.context.fill();
-		if (this.renderIndefinite) {
+		if (this.renderIndefinite && !this._pause) {
 			requestAnimationFrame(this.render);
+		}
+	}
+
+	get isPaused() {
+		return this._pause;
+	}
+	pause() {
+		if (this.renderIndefinite) {
+			this._pause = true;
+		}
+		else {
+			throw "Canvas is not running in indefinite mode.";
+		}
+	}
+	resume() {
+		if (this.renderIndefinite) {
+			if (this._pause) {
+				this._pause = false;
+				requestAnimationFrame(this.render);	
+			}
+		}
+		else {
+			throw "Canvas is not running in indefinite mode.";
 		}
 	}
 }
