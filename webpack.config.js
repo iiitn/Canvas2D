@@ -1,6 +1,7 @@
 module.exports = {
 	entry: {
-		"index": './browser.ts'
+		"index": './browser.ts',
+		"global": './Canvas/global.ts'
 	},
 	output: {
 		filename: 'bundle/[name].js'
