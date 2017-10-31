@@ -4,12 +4,13 @@
   "description": "Canvas Library for IIIT students.",
   "main": "./index.js",
   "scripts": {
-    "prepublish": "tsc"
+    "prepublish": "tsc && node generate_bundle_dts.js"
   },
   "author": "Kishore <kishore.iiitn@gmail.com>",
   "license": "ISC",
   "files": [
     "Shapes",
+    "bundle",
     "Point.js",
     "Point.d.ts",
     "index.js",
@@ -22,8 +23,10 @@
     "webpack": "^3.8.1"
   },
   "dependencies": {
+    "@types/dts-bundle": "0.0.30",
     "@types/lodash": "^4.14.80",
     "@types/victor": "^1.1.0",
+    "dts-bundle": "^0.7.3",
     "lodash": "^4.17.4",
     "source-map-loader": "^0.2.3",
     "victor": "^1.1.0"

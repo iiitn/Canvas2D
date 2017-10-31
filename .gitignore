@@ -4,3 +4,4 @@ package-lock.json
 *.js
 *.js.map
 !webpack.config.js
+!generate_bundle_dts.js
