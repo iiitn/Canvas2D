@@ -1,6 +1,6 @@
 {
   "name": "@iiitn/canvas2d",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Canvas2D Library for IIIT students.",
   "main": "./index.js",
   "scripts": {
