@@ -1,7 +1,7 @@
 {
-  "name": "@iiitn/canvas",
-  "version": "0.1.18",
-  "description": "Canvas Library for IIIT students.",
+  "name": "@iiitn/canvas2d",
+  "version": "0.1.0",
+  "description": "Canvas2D Library for IIIT students.",
   "main": "./index.js",
   "scripts": {
     "prepublish": "tsc && node generate_bundle_dts.js"

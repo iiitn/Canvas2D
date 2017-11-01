@@ -1,3 +1,3 @@
-# Canvas Library.
+# Canvas2D
 
-Canvas Library for HTML5.
+A 2D Graphics Library for learning purpose.
