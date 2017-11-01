@@ -1,5 +1,5 @@
 import {Canvas} from './Canvas';
-import {Rectangle, Circle, Shape} from './Canvas/Shapes';
+import {Rectangle, Circle, Shape, CustomShape} from './Canvas/Shapes';
 
 // YOUR CODE GOES HERE...
 let canvas = new Canvas(document.getElementById("canvas") as HTMLCanvasElement, true);
@@ -23,7 +23,10 @@ for (let i=0; i<40; i++) {
 	canvas.addObject(circle);
 	move(circle, 1);
 }
-canvas.addObject(circle);
+
+let cshape: Shape = new CustomShape([{x: 30, y: 0}, {x: 30, y: 30}, {x: 20, y: 5}, {x: 0, y: 0}, {x: 0, y: 30}, {x: 30, y: 30}, {x: 5, y: 20}, {x: 0, y: 0}], "red").moveTo(100, 100);
+canvas.addObject(cshape);
+move(cshape, 0.3);
 
 let pause = document.getElementById("pause") as HTMLButtonElement;
 pause.addEventListener("click", ()=>{
