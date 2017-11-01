@@ -1,6 +1,6 @@
 import {Canvas} from './index';
 import {Point} from './Point';
-import {Circle, Rectangle} from './Shapes';
+import {Circle, Rectangle, CustomShape} from './Shapes';
 
 // Set globals here.
 
@@ -10,3 +10,4 @@ w.Canvas = Canvas;
 w.Point = Point;
 w.Circle = Circle;
 w.Rectangle = Rectangle;
+w.CustomShape = CustomShape;
